@@ -1,0 +1,2 @@
+¿Cual es la capital de Roma?@@@Ninguna@@@¿Que?@@@Pasen Contexto@@@Italia@@@Roma@@@Estados Unidos@@@3@@@true@@@true@@@0
+¿Cuanto es 2+2?@@@4@@@6@@@8@@@1@@@0@@@piña@@@0@@@true@@@true@@@0
