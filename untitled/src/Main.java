@@ -4,7 +4,7 @@ import java.util.*;
 class fileThing{
     public static void createFile() throws Exception{
         try {
-            File myObj = new File("texto.txt");
+            File myObj = new File("preguntas.txt");
             if (myObj.createNewFile()) {
                 System.out.println("File created: " + myObj.getName());
             } else {
@@ -17,7 +17,7 @@ class fileThing{
     }
     public static void readFile() throws Exception{
         try {
-            File myObj = new File("texto.txt");
+            File myObj = new File("preguntas.txt");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
@@ -47,7 +47,7 @@ class fileThing{
 }
 class pregunta {
     public String descripcionPregunta;
-    public String[] respuestas = new String[6];
+    public String[] respuestas = new String[8];
     public int respuestaCorrecta;
     public boolean[] tipo = new boolean[2];
 
@@ -70,7 +70,7 @@ class pregunta {
                 //Pregunta
                 preguntaRegresar.descripcionPregunta = textReader.next();
                 //Respuestas
-                for (int i = 0; i < 6; i++) {
+                for (int i = 0; i < 8; i++) {
                     preguntaRegresar.respuestas[i] = textReader.next();
                 }
                 //Respuesta correcta
@@ -109,6 +109,10 @@ public class Main {
         pregunta preguntasDraft = new pregunta();
         for (int i = 0; i < preguntasDraft.cantidadPreguntas(); i++){
             preguntas.add(preguntasDraft.createPregunta(preguntas));
+        }
+        for (int i = 0; i < 8; i++){
+            System.out.println(preguntas.get(0).respuestas[i]);
+
         }
     }
 }
